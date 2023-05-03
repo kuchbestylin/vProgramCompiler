@@ -44,12 +44,12 @@ public class LineByLine {
          * <strong>identifier</strong> for the latter stages of the compilation process.
          */
         int programLine = 0;
-        for (String vProgram : lines){
+        for (String vProgram : lines){ 
             programLine++;
             StringTokenizer st = new StringTokenizer(vProgram, " \t\n\r\f()+-/*=;,", true);
             while (st.hasMoreTokens()) {
-                String token = st.nextToken();
-                TokenType tokenType;
+                String token = st.nextToken(); // takes in each line of input and tokenizes it using this class 
+                TokenType tokenType; // stores as an array called Token which can be identitfiers and operators
     
                 if (token.equals("") || token.equals(" ") || token.equals("\n"))
                     continue;
@@ -84,12 +84,13 @@ public class LineByLine {
             System.out.println("\nTotal number of tockens: " + tokens.size());
     
             System.out.println("\n===================== STAGE 2: SYNTAX ANALYSIS (PARSING) =====================\n");
-            boolean derivationValid = utils.syntaxAnalysis(vProgram, tokens, false);
+            boolean derivationValid = utils.syntaxAnalysis(vProgram, tokens, false); // uses method to check if sequence of grammar rule is valid, returns true and program continues.
             if(!derivationValid)
                 continue;
     
             System.out.println("\n===================== STAGE 3: SEMANTIC ANALYSIS =====================\n");
-            utils.semanticAnalysis(vProgram, tokens,false);
+            utils.semanticAnalysis(vProgram, tokens,false); // performs a semantic analysis on the input program
+            // uses the method to check if the program follows valid semantic such as checking if the variables are defined.
     
             System.out.println("\n===================== STAGE 4: INTERMEDIATE CODE REPRESENTATION (ICR) =====================\n");
             var terms = shared.extractTerms(vProgram, tokens);
