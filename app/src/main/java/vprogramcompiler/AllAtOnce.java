@@ -25,10 +25,12 @@ import java.util.StringTokenizer;
 
 public class AllAtOnce {
     public static void main(String[] args) throws FileNotFoundException {
+        Scanner scanner = new Scanner(System.in);
         // C:\Projects\Resources\vprogram.txt
         System.out.print("Enter file path: ");
         String filePath = scanner.nextLine();
         StringBuilder sb = new StringBuilder();
+        scanner.close();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -39,7 +41,6 @@ public class AllAtOnce {
             return;
         }
         String vProgram = sb.toString();
-
         System.out.println("A MINI COMPILER PROJECT FOR CTE711S");
 
 
