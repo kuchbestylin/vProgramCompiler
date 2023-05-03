@@ -16,7 +16,7 @@ public class Shared {
         StringBuilder binary = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            int asciiValue = (int) c;
+            int asciiValue = (int) c; //Casting character to integer
             String binaryValue = Integer.toBinaryString(asciiValue);
             binary.append(String.format("%8s", binaryValue).replace(' ', '0'));
         }

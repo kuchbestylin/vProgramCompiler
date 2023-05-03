@@ -1,3 +1,17 @@
+/**
+* We hereby acknowledge that the work handed in is our own original work. If we
+* have quoted from any other source this information has been correctly referenced. 
+* We also declare that we have read the Namibia University of Science and Technology
+* Policies on Academic Honesty and Integrity as indicated in my course outline and 
+* the NUST general information and regulations - Yearbook 2023
+*
+* @author <220130051> <KUCHERERA TAKUDZWA> 
+* @author <221052380> <UJAVA VATIRAIJE> 
+* @author <221128220> <HAIKALI MAX> 
+* @author <221030670> <AMUTENYA REJOICE>
+* @author <220039828> <KALIMBWE JOEL>
+*/
+
 package vprogramcompiler;
 
 import java.io.BufferedReader;
@@ -11,7 +25,6 @@ import java.util.StringTokenizer;
 
 public class AllAtOnce {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(System.in);
         // C:\Projects\Resources\vprogram.txt
         System.out.print("Enter file path: ");
         String filePath = scanner.nextLine();
